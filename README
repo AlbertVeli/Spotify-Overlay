@@ -1,0 +1,5 @@
+Custom Gentoo overlay for Spotify.
+
+Place in your custom overlay directory in subdir media-sound/spotify.
+
+TODO: Add more descriptions here.
