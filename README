@@ -1,5 +1,31 @@
 Custom Gentoo overlay for Spotify.
 
-Place in your custom overlay directory in subdir media-sound/spotify.
+First you need to set up a custom overlay directory.
+Just create a directory somewhere and put the path to
+it in /etc/make.conf. This can be for instance:
 
-TODO: Add more descriptions here.
+PORTDIR_OVERLAY=/usr/local/custom_overlays
+
+Create the directory and move into it:
+
+ $ mkdir /usr/local/custom_overlays
+ $ cd /usr/local/custom_overlays
+
+Spotify would fit under media-sound so create a subdir with that name
+and checkout the overlay with the following commands:
+
+ $ mkdir media-sound
+ $ cd media-sound/
+ $ git clone http://github.com/AlbertVeli/Spotify-Overlay.git spotify
+
+Done!
+
+Now you can install spotify with emerge as usual.
+
+ $ emerge -av spotify
+
+To get the latest changes, move into the spotify directory and run:
+
+ $ git pull
+
+That's all there is to it.
