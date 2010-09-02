@@ -34,6 +34,9 @@ fi
 # with new hash, redirect output to new version ebuild.
 cat spotify-0.4.7.132.ebuild | sed "s/g9df34c0/$hash/" > spotify-$ver.ebuild
 
+# Build a new Manifest file
+ebuild spotify-$ver.ebuild manifest
+
 echo "New version \"$ver\" available (got \"$myver\")"
 
 # Send out an email to remind me that a new version is available (if credential.txt exists).
@@ -41,3 +44,6 @@ if [ -f credentials.txt ]; then
 	sendEmail -f $MAILFROM -s $SMTPSERVER -u "Spotify $ver available" -t $MAILTO -m "New Spotify $ver available. Update overlay."
 fi
 
+# All done. All that is left now is to run git push to push the changes to github.
+# This could be done automatically, but I prefer to test if it works first before
+# I push it.
