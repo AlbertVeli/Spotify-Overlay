@@ -35,6 +35,10 @@ fi
 cat spotify-0.4.7.132.ebuild | sed "s/g9df34c0/$hash/" > spotify-$ver.ebuild
 
 # Build a new Manifest file
+wget http://repository.spotify.com/pool/non-free/s/spotify/$f
+f64=`echo $f | sed "s/_i386.deb/_amd64.deb/"`
+wget http://repository.spotify.com/pool/non-free/s/spotify/$f64
+
 ebuild spotify-$ver.ebuild manifest
 
 echo "New version \"$ver\" available (got \"$myver\")"
