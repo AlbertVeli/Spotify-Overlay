@@ -21,7 +21,7 @@ ver=`echo $f | sed 's/^.*_\([0-9]*\.[0-9]*\.[0-9]*\.[0-9]*\).*/\1/'`
 hash=`echo $f | sed 's/^.*\.\(.*\)-1_i386.deb/\1/'`
 
 # Get my latest local version
-myver=`ls -th spotify-* | head -1 | sed -n 's/spotify-\(.*\).ebuild/\1/p'`
+myver=`ls -th spotify-*.ebuild | head -1 | sed -n 's/spotify-\(.*\).ebuild/\1/p'`
 
 # Compare version on server with my local version
 if [ "$ver" = "$myver" ]; then
