@@ -20,6 +20,11 @@ ver=`echo $f | sed 's/^.*_\([0-9]*\.[0-9]*\.[0-9]*\.[0-9]*\).*/\1/'`
 # And hash
 hash=`echo $f | sed 's/^.*\.\(.*\)-1_i386.deb/\1/'`
 
+if [ "$ver" = "" ]; then
+	echo "Empty ver string, quitting"
+	exit 1
+fi
+
 # Get my latest local version
 myver=`ls -th spotify-*.ebuild | head -1 | sed -n 's/spotify-\(.*\).ebuild/\1/p'`
 
