@@ -27,7 +27,8 @@ RDEPEND="${RDEPEND}
 	>=x11-libs/qt-dbus-4.5.0
 	>=x11-libs/qt-webkit-4.5.0
 	>=x11-libs/qt-core-4.5.0
-	>=x11-libs/qt-gui-4.5.0"
+	>=x11-libs/qt-gui-4.5.0
+	>=media-sound/pulseaudio-0.9.15"
 
 src_unpack() {
 	unpack ${A} ./data.tar.gz
