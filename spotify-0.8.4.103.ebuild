@@ -55,6 +55,7 @@ RDEPEND="${DEPEND}
 		x11-libs/gtk+:2
 		dev-libs/nss
 		dev-libs/glib:2
+		net-print/cups
 		pulseaudio? ( >=media-sound/pulseaudio-0.9.21 )"
 
 RESTRICT="mirror strip"
