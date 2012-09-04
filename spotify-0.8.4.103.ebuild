@@ -7,6 +7,7 @@ EAPI=4
 DESCRIPTION="Spotify is a social music platform"
 HOMEPAGE="https://www.spotify.com/ch-de/download/previews/"
 
+
 MY_PV="${PV}.g9cb177b.260-1"
 MY_P="${PN}-client_${MY_PV}"
 SRC_BASE="http://repository.spotify.com/pool/non-free/${PN:0:1}/${PN}/"
@@ -54,6 +55,7 @@ RDEPEND="${DEPEND}
 		x11-libs/gtk+:2
 		dev-libs/nss
 		dev-libs/glib:2
+		net-print/cups
 		pulseaudio? ( >=media-sound/pulseaudio-0.9.21 )"
 
 RESTRICT="mirror strip"
