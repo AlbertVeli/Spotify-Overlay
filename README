@@ -1,3 +1,19 @@
+
+NEWS! There is now an official Spotify package for Gentoo here:
+
+http://packages.gentoo.org/package/media-sound/spotify
+
+If you encounter crashes, first try to remove cache and restart:
+
+rm -rf ~/.cache/spotify
+
+If that doesn't help, follow the intstructions given here: 
+
+http://community.spotify.com/t5/Desktop-Linux/Spotify-crashes-shortly-after-start/m-p/144362#M1252
+
+
+Old instructions for this overlay.
+
 Custom Gentoo overlay for Spotify.
 
 First you need to set up a custom overlay directory.
